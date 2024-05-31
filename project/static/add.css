@@ -1,0 +1,48 @@
+.menuDraw{  
+  /* position: fixed; */
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  background-attachment: scroll;
+  justify-content: center;
+}
+.menuDraw button{
+  font-family: "Press Start 2P";
+  font-size: 1vw;
+  height: 3vw;
+}
+/* ----------------------------МОДАЛЬНОЕ ОКНО----------------------------*/
+/* Модальный (фон) */
+.modal1 {
+    display: none; /* Скрыто по умолчанию */
+    align-items: center;
+    justify-content: space-around;
+    background-attachment: fixed;
+  }
+  
+  /* Кнопка закрытия */
+  .cloze {
+    color: #aaa;
+    float: right;
+    font-size: 4vw;
+    font-weight: bold;
+    position: relative;
+    top: -50%;
+  }
+  .cloze:hover,
+  .cloze:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#mydiv {
+    background: #3333338a ; height: 12vw; width: 100%; max-width: 16vw; position: absolute; top: 3vw; z-index: 1000;;
+}
+   
+#mydivheader {
+    background: rgba(0, 0, 0, 0.611);text-transform: uppercase; text-align:right; cursor: move; display: flex; justify-content: end; height: 30%;
+}
+/* #color1{
+  cursor: pointer;
+} */

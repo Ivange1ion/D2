@@ -1,0 +1,15 @@
+<form id="fr" method="post" style="position: absolute; display: none;">
+    {% csrf_token %}
+    <input type="text" name="name" id="author">
+    <input type="submit">
+</form>
+<script>
+    window.onload=()=>{
+        document.getElementById('author').value=localStorage.getItem('name')
+        // alert(localStorage.getItem('name'))
+        document.getElementById('fr').submit()
+        window.location.href='/home'
+        // returnToPreviousPage();
+        // stop()
+    }
+</script>

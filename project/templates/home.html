@@ -1,0 +1,28 @@
+<form id="fr" method="post" style="position: absolute; display: none;">
+    {% csrf_token %}
+    <input type="text" name="name" id="author">
+    <!-- <input type="submit" id="ff"> -->
+</form>
+<p>
+    <button onclick="window.location.href='/logout'">Log out</button>
+    <button onclick="window.location.href='/main'">Add note</button>
+</p>
+<main>
+    <!-- {{notes}} -->
+    {% for note in notes %}
+    {{note.author}}
+    <img src="{{note.data}}">
+    {% endfor %}
+</main>
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        // setTimeout(()=>{
+            document.getElementById('author').value=localStorage.getItem('name')
+            document.getElementById('fr').submit()
+        // }, 3000)
+        // alert(localStorage.getItem('name'))
+        // document.getElementById('fr').submit()
+        // returnToPreviousPage();
+    })
+    window.stop()
+</script>
